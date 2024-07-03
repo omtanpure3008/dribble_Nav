@@ -1,0 +1,170 @@
+:root {
+    --primary: #fff;
+    --secondary: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: poppins;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    /* background-color: darkorange; */
+}
+
+.navbar {
+    height: 100px;
+    width: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+}
+
+.left {
+    height: 100%;
+    width: 40%;
+    /* background-color: lightseagreen; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left a {
+    text-decoration: none;
+    margin: 0 1vw;
+    font-size: 1vw;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.mid {
+    width: 20%;
+    height: 100%;
+    /* background-color: darkgreen; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+    font-size: 1.2vw;
+}
+
+.right {
+    height: 100%;
+    width: 40%;
+    /* background-color: crimson; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.right input {
+    font-size: 1.2vw;
+    padding: .5vw 1vw;
+    border: none;
+    border-radius: 50px;
+    margin: 0 1vw;
+    /* color: red; */
+}
+
+.right input::placeholder {
+    font-size: 1vw;
+
+}
+
+.right .login,
+.right .Signup {
+    font-size: .9vw;
+    padding: .7vw 1.2vw;
+    border: none;
+    border-radius: 50px;
+    margin: 0 .8vw;
+    font-weight: 600;
+}
+
+.right .login {
+    background-color: #dadada;
+    color: var(--secondary);
+}
+
+.right .Signup {
+    background-color: var(--secondary);
+    color: var(--primary);
+} 
+
+.left i {
+    display: none;
+}
+
+.right i {
+    display: none;
+}
+
+@media (min-width: 1px) and (max-width: 425px) {
+
+    .left {
+        display: none;
+    }
+
+    .mid {
+        width: 30%;
+        justify-content: flex-start;
+        padding: 0 3vh;
+    }
+
+    .mid h1 {
+        font-size: 7vw;
+    }
+
+    .right {
+        width: 80%;
+        padding: 0 3vh;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    }
+
+    .right input {
+        display: none;
+    }
+
+    .right .login {
+        display: none;
+    }
+
+    .right .Signup {
+        font-size: 4vw;
+        font-weight: 400;
+        padding: 1.5vh 2.5vh;
+    }
+
+    .right i {
+        display: block;
+        margin: 0 2vh;
+        font-size: 6vw;
+    }
+
+    .dropdown {
+        display: flex;
+        background-color: darkorange;
+        position: absolute;
+        height: calc(100% - 100px);
+        width: 100%;
+        top: 100px;
+        left: 0;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 3vh;
+    }
+
+    .dropdown a {
+        font-size: 5vw;
+        margin: 1.5vh 0;
+    }
+}
